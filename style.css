@@ -77,9 +77,31 @@ section {
 .hero {
     min-height: 85vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-photo {
+    flex: 0 0 380px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 35px rgba(139, 92, 246, 0.2);
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .eyebrow {
@@ -115,7 +137,18 @@ h1 {
     color: white;
     font-weight: bold;
     transition: transform 0.2s, opacity 0.2s;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.github-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    vertical-align: middle;
+    flex: 0 0 24px;
 }
 
 .button:hover {
@@ -302,37 +335,6 @@ footer {
 }
 
 
-/* Accueil avec photo à droite */
-.hero {
-    min-height: 85vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-}
-
-.hero-content {
-    flex: 1;
-}
-
-.hero-photo {
-    flex: 0 0 380px;
-    height: 450px;
-    overflow: hidden;
-    border-radius: 24px;
-    border: 2px solid var(--accent);
-    box-shadow: 0 0 35px rgba(139, 92, 246, 0.2);
-}
-
-.hero-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
 /* Adaptation aux téléphones */
 @media (max-width: 750px) {
     .hero {
@@ -370,7 +372,7 @@ footer {
 }
 
 
-/* Titre du projet et bouton Jouer */
+/* Titre du projet */
 .project-title-row {
     width: 100%;
     display: flex;
@@ -384,37 +386,11 @@ footer {
     margin-bottom: 0;
 }
 
-.play-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 45px;
-    border-radius: 14px;
-    background: var(--accent);
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: 2px solid var(--accent);
-    box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-    white-space: nowrap;
-}
-
-.play-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 35px rgba(139, 92, 246, 0.5);
-}
-
 @media (max-width: 650px) {
     .project-title-row {
         align-items: flex-start;
         flex-direction: column;
         gap: 20px;
-    }
-
-    .play-button {
-        padding: 15px 35px;
-        font-size: 1.2rem;
     }
 }
 
@@ -481,4 +457,22 @@ footer {
         flex-direction: column;
         gap: 18px;
     }
+}
+
+
+
+.pdf-container {
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+    margin: 30px auto;
+    border: 1px solid #444;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }

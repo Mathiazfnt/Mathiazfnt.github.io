@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Go-reloaded | Mathias Fontagne</title>
+
+    <meta name="description"
+          content="Présentation du projet Go-reloaded, un outil de transformation et de correction de texte développé en Go.">
+
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <!-- INTRODUCTION -->
+        <section class="hero project-hero">
+
+            <div class="project-title-row">
+                <div>
+                    <div class="eyebrow">PROJET ÉTUDIANT · YNOV BORDEAUX</div>
+                    <h1>Go-<span>reloaded</span></h1>
+                </div>
+            </div>
+
+            <p>
+                Go-reloaded est un outil en ligne de commande développé en Go.
+                Son objectif est de lire un fichier texte, d'appliquer
+                automatiquement différentes règles de transformation,
+                puis d'écrire le résultat dans un nouveau fichier.
+                Ce projet permet de mettre en pratique la manipulation
+                de chaînes de caractères, les conversions numériques
+                et la gestion de fichiers.
+            </p>
+
+            <div class="buttons">
+                <a href="#fonctionnement" class="button">
+                    Découvrir le projet
+                </a>
+
+                <a href="#technologies" class="button secondary">
+                    Technologies utilisées
+                </a>
+            </div>
+
+            <a href="../../index.html#projets" class="button secondary">
+                ← Retour au portfolio
+            </a>
+
+        </section>
+
+
+        <!-- PRÉSENTATION -->
+        <section id="presentation">
+
+            <h2 class="section-title">Présentation du projet</h2>
+
+            <p class="section-description">
+                Le concept et les objectifs de Go-reloaded.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Le concept</h3>
+
+                    <p>
+                        Go-reloaded est un programme qui modifie
+                        automatiquement un texte à partir de règles
+                        prédéfinies. Il permet notamment de corriger
+                        certaines erreurs de ponctuation, de transformer
+                        la casse des mots et de convertir des nombres.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Les objectifs</h3>
+
+                    <p>
+                        L'objectif est de créer un outil capable de lire
+                        un fichier d'entrée, de traiter son contenu selon
+                        différentes règles, puis de générer un fichier
+                        de sortie contenant le texte transformé.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Le fonctionnement</h3>
+
+                    <p>
+                        Le programme reçoit deux arguments : le nom
+                        du fichier à lire et celui du fichier dans lequel
+                        enregistrer le résultat. Les modifications sont
+                        appliquées au texte avant son écriture.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FONCTIONNEMENT -->
+        <section id="fonctionnement">
+
+            <h2 class="section-title">Fonctionnement du programme</h2>
+
+            <p class="section-description">
+                Les différentes étapes du traitement du texte.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>1. Lecture du fichier</h3>
+
+                    <p>
+                        Le programme récupère le contenu du fichier
+                        d'entrée grâce aux fonctionnalités de gestion
+                        des fichiers de la bibliothèque standard de Go.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Fichier source</span>
+                        <span class="tag">Lecture</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>2. Transformation du texte</h3>
+
+                    <p>
+                        Le contenu est analysé et les différentes règles
+                        sont appliquées : conversion des nombres,
+                        modification des mots, correction de la ponctuation
+                        et ajustements grammaticaux.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Chaînes de caractères</span>
+                        <span class="tag">Règles de traitement</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>3. Écriture du résultat</h3>
+
+                    <p>
+                        Une fois le traitement terminé, le texte corrigé
+                        est enregistré dans le fichier de sortie demandé.
+                        Le fichier d'entrée reste distinct du résultat.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Fichier de sortie</span>
+                        <span class="tag">Écriture</span>
+                    </div>
+                </article>
+
+            </div>
+            <br>
+            <div class="card">
+                <h3>Exemple d'utilisation</h3>
+
+                <p>
+                    Le programme peut transformer des nombres
+                    hexadécimaux ou binaires en nombres décimaux,
+                    puis enregistrer le texte modifié.
+                </p>
+
+                <pre><code>go run . sample.txt result.txt</code></pre>
+
+                <p>
+                    Par exemple, la transformation de
+                    <strong>42 (hex)</strong> donne <strong>66</strong>,
+                    tandis que <strong>10 (bin)</strong> donne
+                    <strong>2</strong>.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- RÈGLES DE TRANSFORMATION -->
+        <section id="regles">
+
+            <h2 class="section-title">Les règles de transformation</h2>
+
+            <p class="section-description">
+                Les principales règles que le programme doit appliquer.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Conversions numériques</h3>
+
+                    <p>
+                        Les balises <strong>(hex)</strong> et
+                        <strong>(bin)</strong> permettent de convertir
+                        le nombre qui les précède en base décimale.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Hexadécimal</span>
+                        <span class="tag">Binaire</span>
+                        <span class="tag">Décimal</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Modification de la casse</h3>
+
+                    <p>
+                        Les balises <strong>(up)</strong>,
+                        <strong>(low)</strong> et <strong>(cap)</strong>
+                        permettent respectivement de mettre des mots
+                        en majuscules, en minuscules ou avec une
+                        majuscule initiale. Un nombre peut préciser
+                        combien de mots précédents doivent être modifiés.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Majuscules</span>
+                        <span class="tag">Minuscules</span>
+                        <span class="tag">Capitalisation</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Correction de la ponctuation</h3>
+
+                    <p>
+                        Le programme doit replacer correctement
+                        les signes de ponctuation, supprimer les espaces
+                        incorrects et conserver les groupes de signes
+                        comme les points de suspension ou les doubles
+                        signes d'exclamation.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Ponctuation</span>
+                        <span class="tag">Espacement</span>
+                        <span class="tag">Apostrophes</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Correction grammaticale</h3>
+
+                    <p>
+                        Le programme doit transformer l'article anglais
+                        « a » en « an » lorsque le mot suivant commence
+                        par une voyelle ou par la lettre h, en tenant
+                        compte des exemples prévus dans le sujet.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Anglais</span>
+                        <span class="tag">Règles grammaticales</span>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECHNOLOGIES -->
+        <section id="technologies">
+
+            <h2 class="section-title">Technologies utilisées</h2>
+
+            <p class="section-description">
+                Les langages, packages et outils mobilisés dans le projet.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Go</h3>
+
+                    <p>
+                        Langage utilisé pour développer l'ensemble
+                        du programme, organiser le code et implémenter
+                        les règles de transformation du texte.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Go</span>
+                        <span class="tag">Fonctions</span>
+                        <span class="tag">Chaînes de caractères</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Gestion des fichiers</h3>
+
+                    <p>
+                        Le package os permet notamment de récupérer
+                        les arguments de la commande, de lire un fichier
+                        et d'écrire le résultat dans un autre fichier.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">os.Args</span>
+                        <span class="tag">os.ReadFile</span>
+                        <span class="tag">os.WriteFile</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Manipulation du texte</h3>
+
+                    <p>
+                        Le package strings fournit des outils pour
+                        découper, assembler et transformer les chaînes
+                        de caractères pendant le traitement.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">strings.Fields</span>
+                        <span class="tag">strings.ToUpper</span>
+                        <span class="tag">strings.ToLower</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Conversions numériques</h3>
+
+                    <p>
+                        Le package strconv permet de convertir des
+                        nombres représentés sous forme de texte et
+                        de traiter les bases numériques utilisées
+                        dans les balises du projet.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">strconv.ParseInt</span>
+                        <span class="tag">Base 2</span>
+                        <span class="tag">Base 16</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Tests et qualité du code</h3>
+
+                    <p>
+                        Les tests unitaires permettent de vérifier
+                        chaque règle, de détecter les erreurs et
+                        de s'assurer que les modifications ne cassent
+                        pas les fonctionnalités déjà développées.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">testing</span>
+                        <span class="tag">go test</span>
+                        <span class="tag">gofmt</span>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIFFICULTÉS -->
+        <section id="difficultes">
+
+            <h2 class="section-title">Les difficultés du projet</h2>
+
+            <p class="section-description">
+                Les points qui demandent une attention particulière.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Ordre des transformations</h3>
+
+                    <p>
+                        Certaines règles peuvent se suivre ou interagir.
+                        Il faut donc organiser leur application pour
+                        éviter qu'une transformation perturbe les suivantes.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Gestion de la ponctuation</h3>
+
+                    <p>
+                        Les signes isolés, les groupes de ponctuation
+                        et les apostrophes entourant plusieurs mots
+                        nécessitent un traitement précis des espaces.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Tests et cas particuliers</h3>
+
+                    <p>
+                        Les exemples du sujet ne couvrent pas toutes
+                        les situations. Il est important de tester
+                        les limites, les erreurs et les combinaisons
+                        de plusieurs règles.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CE QUE J'AI APPRIS -->
+        <section id="apprentissages">
+
+            <h2 class="section-title">Ce que j'ai appris</h2>
+
+            <p class="section-description">
+                Les compétences travaillées au cours du projet.
+            </p>
+
+            <div class="card">
+                <ul>
+                    <li>Manipuler des chaînes de caractères en Go.</li>
+                    <li>Lire et écrire des fichiers depuis un programme.</li>
+                    <li>Convertir des nombres entre différentes bases.</li>
+                    <li>Découper un problème en fonctions plus simples.</li>
+                    <li>Appliquer des règles de transformation dans un ordre précis.</li>
+                    <li>Écrire des tests unitaires pour vérifier les résultats.</li>
+                    <li>Rechercher et corriger des erreurs de traitement.</li>
+                    <li>Améliorer la lisibilité et l'organisation du code.</li>
+                </ul>
+            </div>
+
+        </section>
+
+
+        <!-- LIENS -->
+        <section id="liens">
+
+            <h2 class="section-title">Découvrir le projet</h2>
+
+            <p class="section-description">
+                Retrouvez le code source et les documents de présentation
+                du projet Go-reloaded.
+            </p>
+
+            <div class="buttons">
+
+                <!-- Remplace le lien # par l'adresse de ton dépôt GitHub -->
+                <a href="#"
+                   class="button">
+                    Voir le projet sur GitHub
+                    <img class="github-logo"
+                         src="../../photo/github-logo.png"
+                         alt="Logo GitHub">
+
+                </a>
+                <a href="detaille_reloaded.html" class="button secondary">
+                    Voir les détails du projet
+                </a>
+
+                <a href="../../index.html#projets"
+                   class="button secondary">
+                    Retour au portfolio
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Mathias Fontagne — Portfolio personnel</p>
+    </footer>
+
+</body>
+</html>
