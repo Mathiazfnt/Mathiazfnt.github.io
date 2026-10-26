@@ -13,13 +13,42 @@
 <body class="game-body">
 
     <!-- En-tête -->
-    <header class="game-header">
-        <h1>Projet <span>Red</span></h1>
-    </header>
+    <header class="reloaded-header">
+        <nav class="reloaded-nav" aria-label="Navigation du projet">
+            <ul class="reloaded-links reloaded-return-links">
+                <li><a href="../../index.html#projets">Retour au portfolio</a></li>
+                <li><a href="description_red.html">Déscription du projet</a></li>
+            </ul>
 
+            <h1>Projet <span>Red</span></h1>
+
+            <ul class="reloaded-links reloaded-section-links">
+                <li><a class="button secondary" href="#presentation">Présentation</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <!-- Espace réservé au jeu -->
     <main >
+        <section id="presentation">
+            <h2 class="section-title">Présentation du projet</h2>
+            <p class="section-description">
+                Consultez la présentation du projet red ci-dessous.
+            </p>
 
+            <div class="card pdf-card presentation-card">
+                <div class="pdf-container">
+                    <iframe
+                        src="diverts/Projet RED - Sujet.pdf"
+                        title="Présentation du projet red">
+                    </iframe>
+                </div>
+
+                <a class="button secondary" href="diverts/Projet RED - Sujet.pdf" download>
+                    Télécharger la présentation
+                </a>
+            </div>
+        </section>
     </main>
 
     <!-- Pied de page -->
