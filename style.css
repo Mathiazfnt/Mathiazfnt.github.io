@@ -628,3 +628,19 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+.cv-image {
+    display: block;
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}

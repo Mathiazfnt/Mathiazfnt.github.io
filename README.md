@@ -41,3 +41,11 @@ mettre le lien de andy
 mettre les readme des sujets red
 
 mettre les bouton sur descirpion red 
+
+revoir e linkdin 
+
+mettre les logo avant le texte 
+
+faire les pages html des nouveau projet ,
+
+faire les pages sur les projet application externe 
