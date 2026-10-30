@@ -644,3 +644,27 @@ footer {
     align-items: center;
     padding: 20px;
 }
+
+footer {
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+footer .contact-card {
+    padding: 10px 15px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+footer img {
+    width: 16px;
+    height: 16px;
+}
+
+footer h2 {
+    font-size: 18px;
+    margin: 5px 0 10px;
+}

@@ -1,0 +1,590 @@
+ 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Push-swap | Mathias Fontagne</title>
+
+    <meta name="description"
+          content="Présentation du projet Push-swap, deux programmes développés en Go pour trier une pile d'entiers avec un minimum d'instructions.">
+
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="project-nav" aria-label="Navigation de la page">
+            <a href="../../index.html#projets" class="logo">Push<span>-swap</span></a>
+
+            <ul>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#fonctionnement">Fonctionnement</a></li>
+                <li><a href="#instructions">Instructions</a></li>
+                <li><a href="#algorithmes">Algorithmes</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#difficultes">Difficultés</a></li>
+                <li><a href="#apprentissages">Apprentissages</a></li>
+                <li><a href="#liens">Liens</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INTRODUCTION -->
+        <section class="hero project-hero">
+
+            <div class="project-title-row">
+                <div>
+                    <div class="eyebrow">PROJET ÉTUDIANT · YNOV BORDEAUX</div>
+                    <h1>Push-<span>swap</span></h1>
+                </div>
+            </div>
+
+            <p>
+                Push-swap est un projet développé en Go dont l'objectif
+                est de trier une liste d'entiers en utilisant deux piles
+                et un ensemble limité de 11 instructions.
+                Le défi consiste à trouver une suite d'opérations
+                permettant de trier les valeurs dans l'ordre croissant
+                avec le moins de coups possible.
+
+                Le projet est composé de deux programmes indépendants :
+                push-swap, qui calcule les instructions de tri, et
+                checker, qui les exécute et vérifie le résultat.
+            </p>
+
+            <div class="buttons">
+
+                <a href="https://github.com/Mathiazfnt/push-swap"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="button">
+                    Voir le projet sur GitHub
+                    <img class="github-logo"
+                         src="../../photo/github-logo.png"
+                         alt="Logo GitHub">
+                </a>
+
+                <a href="detaille_push_swap.html" class="button secondary">
+                    Voir les détails du projet
+                </a>
+
+                <a href="../../index.html#projets"
+                   class="button secondary">
+                    Retour au portfolio
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRÉSENTATION -->
+        <section id="presentation">
+
+            <h2 class="section-title">Présentation du projet</h2>
+
+            <p class="section-description">
+                Le concept et les objectifs de Push-swap.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Le concept</h3>
+
+                    <p>
+                        Push-swap consiste à trier une liste d'entiers
+                        placée dans une pile appelée A, en utilisant
+                        une seconde pile appelée B.
+                        Les déplacements et modifications sont réalisés
+                        uniquement grâce aux instructions autorisées
+                        par le sujet.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Les objectifs</h3>
+
+                    <p>
+                        L'objectif principal est de développer un
+                        algorithme capable de trier les valeurs dans
+                        l'ordre croissant en minimisant le nombre
+                        d'instructions utilisées.
+                        La qualité du programme dépend donc autant
+                        du résultat que de son optimisation.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Deux programmes</h3>
+
+                    <p>
+                        Le projet est composé de deux exécutables.
+                        Push-swap génère une suite d'instructions
+                        pour trier les valeurs, tandis que checker
+                        lit et exécute ces instructions afin de vérifier
+                        si la pile A est triée et si la pile B est vide.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FONCTIONNEMENT -->
+        <section id="fonctionnement">
+
+            <h2 class="section-title">Fonctionnement du projet</h2>
+
+            <p class="section-description">
+                Les différentes étapes de traitement et de vérification.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>1. Initialisation des piles</h3>
+
+                    <p>
+                        Les entiers reçus en arguments sont récupérés
+                        et placés dans la pile A, dans le même ordre
+                        que celui fourni.
+                        La pile B est initialement vide.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Arguments</span>
+                        <span class="tag">Pile A</span>
+                        <span class="tag">Pile B</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>2. Calcul des instructions</h3>
+
+                    <p>
+                        Le programme push-swap analyse les valeurs
+                        présentes dans les piles et détermine les
+                        opérations à effectuer pour obtenir un tri.
+                        Il cherche à réduire au maximum le nombre
+                        de déplacements nécessaires.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Algorithmes</span>
+                        <span class="tag">Optimisation</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>3. Vérification du résultat</h3>
+
+                    <p>
+                        Le programme checker récupère les instructions
+                        depuis l'entrée standard et les exécute.
+                        Il affiche OK si la pile A est triée et que
+                        la pile B est vide, sinon il affiche KO.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Checker</span>
+                        <span class="tag">Validation</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <br>
+
+            <div class="card">
+                <h3>Exemple d'utilisation</h3>
+
+                <p>
+                    Le programme reçoit une liste d'entiers et génère
+                    les instructions nécessaires à son tri.
+                    Ces instructions peuvent ensuite être directement
+                    transmises au programme checker.
+                </p>
+
+                <pre><code>ARG="4 67 3 87 23"
+
+./push-swap "$ARG" | wc -l
+
+./push-swap "$ARG" | ./checker "$ARG"</code></pre>
+
+                <p>
+                    La première commande permet de compter le nombre
+                    d'instructions générées.
+                    La seconde vérifie automatiquement si le résultat
+                    du tri est correct.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- INSTRUCTIONS -->
+        <section id="instructions">
+
+            <h2 class="section-title">Les 11 instructions</h2>
+
+            <p class="section-description">
+                Les opérations autorisées pour manipuler les deux piles.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Déplacement entre les piles</h3>
+
+                    <p>
+                        Ces instructions permettent de déplacer
+                        l'élément situé au sommet d'une pile vers
+                        le sommet de l'autre.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">pa : B vers A</span>
+                        <span class="tag">pb : A vers B</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Échange des éléments</h3>
+
+                    <p>
+                        Ces opérations échangent les deux premiers
+                        éléments d'une pile. L'instruction ss
+                        effectue les deux échanges simultanément.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">sa</span>
+                        <span class="tag">sb</span>
+                        <span class="tag">ss</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Rotation vers le haut</h3>
+
+                    <p>
+                        La rotation décale tous les éléments d'une
+                        position vers le haut : le premier élément
+                        devient le dernier. Les deux piles peuvent
+                        également être tournées simultanément.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">ra</span>
+                        <span class="tag">rb</span>
+                        <span class="tag">rr</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Rotation vers le bas</h3>
+
+                    <p>
+                        La rotation inverse décale les éléments
+                        d'une position vers le bas : le dernier
+                        élément devient le premier.
+                        L'instruction rrr agit sur les deux piles.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">rra</span>
+                        <span class="tag">rrb</span>
+                        <span class="tag">rrr</span>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALGORITHMES -->
+        <section id="algorithmes">
+
+            <h2 class="section-title">Algorithmes de tri</h2>
+
+            <p class="section-description">
+                Les différentes stratégies utilisées pour réduire
+                le nombre d'instructions.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Tri des petites piles</h3>
+
+                    <p>
+                        Pour les petites listes, des algorithmes
+                        spécifiques permettent de trouver rapidement
+                        une solution avec très peu d'instructions.
+                        Le programme adapte sa méthode en fonction
+                        du nombre d'éléments à trier.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Tri des grandes piles</h3>
+
+                    <p>
+                        Lorsque le nombre de valeurs augmente,
+                        il devient nécessaire d'utiliser une stratégie
+                        plus adaptée. L'objectif est d'organiser
+                        les déplacements entre les deux piles afin
+                        de limiter les rotations et les échanges.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Optimisation des déplacements</h3>
+
+                    <p>
+                        Le programme peut combiner plusieurs
+                        instructions pour effectuer des opérations
+                        simultanément. Les rotations communes
+                        permettent notamment de réduire le nombre
+                        total de coups nécessaires.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECHNOLOGIES -->
+        <section id="technologies">
+
+            <h2 class="section-title">Technologies utilisées</h2>
+
+            <p class="section-description">
+                Les langages, outils et fonctionnalités mobilisés.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Go</h3>
+
+                    <p>
+                        Langage utilisé pour développer les deux
+                        programmes, organiser les fonctions
+                        et implémenter les algorithmes de tri
+                        ainsi que les instructions de manipulation
+                        des piles.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Go</span>
+                        <span class="tag">Fonctions</span>
+                        <span class="tag">Packages</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Manipulation des piles</h3>
+
+                    <p>
+                        Les piles A et B sont représentées à l'aide
+                        de tableaux d'entiers.
+                        Les opérations permettent de modifier
+                        leur contenu en respectant les règles
+                        imposées par le sujet.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Slices</span>
+                        <span class="tag">Tableaux</span>
+                        <span class="tag">Indices</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Gestion des instructions</h3>
+
+                    <p>
+                        Les différentes opérations sont organisées
+                        dans des fonctions indépendantes.
+                        Cela permet de réutiliser les mêmes
+                        instructions dans les deux programmes.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">Fonctions</span>
+                        <span class="tag">Packages Go</span>
+                        <span class="tag">Instructions</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Entrées et sorties</h3>
+
+                    <p>
+                        Les arguments permettent de récupérer
+                        les entiers à trier. Le programme checker
+                        utilise également l'entrée standard pour
+                        lire les instructions à exécuter.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">os.Args</span>
+                        <span class="tag">Entrée standard</span>
+                        <span class="tag">Sortie standard</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Tests et validation</h3>
+
+                    <p>
+                        Les tests permettent de vérifier le bon
+                        fonctionnement des instructions, des
+                        algorithmes de tri et de la gestion des erreurs.
+                        Le checker permet également de contrôler
+                        automatiquement les résultats obtenus.
+                    </p>
+
+                    <div class="tag-list">
+                        <span class="tag">testing</span>
+                        <span class="tag">go test</span>
+                        <span class="tag">Validation</span>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIFFICULTÉS -->
+        <section id="difficultes">
+
+            <h2 class="section-title">Les difficultés du projet</h2>
+
+            <p class="section-description">
+                Les principaux défis rencontrés pendant le développement.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Manipulation des piles</h3>
+
+                    <p>
+                        Les opérations de rotation et de déplacement
+                        nécessitent une bonne gestion des indices
+                        et des slices en Go.
+                        Une erreur dans les positions peut rapidement
+                        provoquer un résultat incorrect.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Optimisation du tri</h3>
+
+                    <p>
+                        Trouver une solution qui trie correctement
+                        les valeurs ne suffit pas.
+                        Il faut également chercher à réduire
+                        le nombre d'instructions, ce qui demande
+                        de comparer différentes stratégies.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Gestion des cas particuliers</h3>
+
+                    <p>
+                        Le programme doit gérer les listes déjà triées,
+                        les petites quantités de valeurs, les nombres
+                        négatifs, les doublons et les arguments invalides.
+                        Chaque situation doit être correctement traitée.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- APPRENTISSAGES -->
+        <section id="apprentissages">
+
+            <h2 class="section-title">Ce que j'ai appris</h2>
+
+            <p class="section-description">
+                Les compétences développées au cours du projet.
+            </p>
+
+            <div class="card">
+                <ul>
+                    <li>Comprendre et manipuler le fonctionnement des piles.</li>
+                    <li>Manipuler des slices et gérer leurs indices en Go.</li>
+                    <li>Développer et organiser des fonctions réutilisables.</li>
+                    <li>Implémenter les 11 instructions du sujet.</li>
+                    <li>Concevoir plusieurs algorithmes de tri.</li>
+                    <li>Adapter une stratégie en fonction de la taille des données.</li>
+                    <li>Optimiser le nombre d'instructions nécessaires.</li>
+                    <li>Créer un programme de vérification indépendant.</li>
+                    <li>Gérer les erreurs et les cas particuliers.</li>
+                    <li>Tester et comparer les performances des algorithmes.</li>
+                </ul>
+            </div>
+
+        </section>
+
+
+        <!-- LIENS -->
+        <section id="liens">
+
+            <h2 class="section-title">Découvrir le projet</h2>
+
+            <p class="section-description">
+                Retrouvez le code source et les documents de présentation
+                du projet Push-swap.
+            </p>
+
+            <div class="buttons">
+
+                <a href="https://github.com/Mathiazfnt/push-swap"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="button">
+                    <img class="github-logo"
+                         src="../../photo/github-logo.png"
+                         alt="Logo GitHub">
+                    Voir le projet sur GitHub
+                </a>
+
+                <a href="detaille_push-swap.html" class="button secondary">
+                    Voir les détails du projet
+                </a>
+
+                <a href="../../index.html#projets"
+                   class="button secondary">
+                    Retour au portfolio
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Mathias Fontagne — Portfolio personnel</p>
+    </footer>
+
+</body>
+</html>
