@@ -164,7 +164,7 @@ h1 {
     flex: 0 0 24px;
 }
 
-.red-project-logo {
+.project-button-logo {
     width: 64px;
     height: 44px;
     margin-right: 8px;
@@ -395,7 +395,10 @@ footer {
     height: 380px;
 }
 
-.project-hero-photo img {
+.project-description-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -487,10 +490,11 @@ footer {
     align-items: center;
 }
 
-.red-header h1 .red-project-logo {
+.red-header-logo {
     width: 110px;
     height: 80px;
     flex: 0 0 110px;
+    object-fit: contain;
 }
 
 .reloaded-links {
@@ -562,7 +566,7 @@ footer {
 }
 
 @media (max-width: 650px) {
-    .red-header h1 .red-project-logo {
+    .red-header h1 .red-header-logo {
         width: 90px;
         height: 68px;
         flex-basis: 90px;
