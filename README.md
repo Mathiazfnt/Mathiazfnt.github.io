@@ -34,24 +34,17 @@ https://mathiazfnt.github.io/
 
 # chose a faire sur le site 
 
-mettre les lien de mes sujet red
-
 mettre le lien de andy
-
-mettre les readme des sujets red
-
-mettre les bouton sur descirpion red 
-
-revoir e linkdin 
-
-mettre les logo avant le texte 
 
 faire les pages html des nouveau projet ,
 
-faire les pages sur les projet application externe 
-
-mettre le logo en gros de shinobe genesis 
-
 cree des logo par projet 
 
-mettre en plus gros les logo de shinobi genesis 
+metree quelque ligne de code dans les detaille 
+
+cree le projet du root me 
+
+faire le detaille de push swap 
+
+faire les 2 du ways 
+
