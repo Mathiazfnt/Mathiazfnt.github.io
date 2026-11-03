@@ -487,6 +487,12 @@ footer {
     align-items: center;
 }
 
+.red-header h1 .red-project-logo {
+    width: 110px;
+    height: 80px;
+    flex: 0 0 110px;
+}
+
 .reloaded-links {
     display: flex;
     align-items: center;
@@ -537,6 +543,30 @@ footer {
 
 .game-body section[id] {
     scroll-margin-top: 180px;
+}
+
+@media (max-width: 900px) {
+    .red-header .reloaded-nav {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+    }
+
+    .red-header h1 {
+        grid-row: 1;
+    }
+
+    .red-header .reloaded-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .red-header h1 .red-project-logo {
+        width: 90px;
+        height: 68px;
+        flex-basis: 90px;
+    }
 }
 
 /* Espace libre pour intégrer le jeu plus tard */

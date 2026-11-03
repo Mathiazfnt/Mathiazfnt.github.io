@@ -1,5 +1,10 @@
 https://mathiazfnt.github.io/
 
+# Portfolio de Mathias Fontagne
+
+Portfolio personnel présentant mon parcours, mes compétences, mes projets et
+mes coordonnées.
+
 # Arborescence du projet
 
 ```text
@@ -7,8 +12,11 @@ https://mathiazfnt.github.io/
 ├── index.html
 ├── style.css
 ├── README.md
-├── photo/
+├── pages_CV/
 │   ├── CV_Mathias_Fontagne.png
+│   └── CV_page.html
+├── photo/
+│   ├── 101px-Root-me-logo.png
 │   ├── github-logo.png
 │   ├── Logo_de_linkedin.png
 │   ├── logo_email.png
@@ -17,19 +25,27 @@ https://mathiazfnt.github.io/
 └── projets/
     ├── Red/
     │   ├── description_red.html
-    │   └── detaille_red.html
-    └── go-reload/
-        ├── description_reloaded.html
-        ├── detaille_reloaded.html
-        └── sujet_divert/
-            ├── Bonus_Go_Reforged_corrige.pdf
-            ├── Go-ascended(3).pdf
-            ├── Go-reforged(2).pdf
-            ├── Go-reloaded_Presentation.pdf
-            ├── Go-reloaded_README_corrige.pdf
-            ├── go-reloaded.pdf
-            ├── README.md
-            └── readme(bonus).md
+    │   ├── detaille_red.html
+    │   └── diverts/
+    │       ├── Projet RED-Sujet.pdf
+    │       ├── README.md
+    │       ├── Shinobi.pdf
+    │       └── Shinobi_Genesis_README.pdf
+    ├── go-reload/
+    │   ├── description_reloaded.html
+    │   ├── detaille_reloaded.html
+    │   └── sujet_divert/
+    │       ├── Bonus_Go_Reforged_corrige.pdf
+    │       ├── Go-ascended(3).pdf
+    │       ├── Go-reforged(2).pdf
+    │       ├── Go-reloaded_Presentation.pdf
+    │       ├── Go-reloaded_README_corrige.pdf
+    │       ├── go-reloaded.pdf
+    │       ├── README.md
+    │       └── readme(bonus).md
+    └── push_swap/
+        ├── description_push-swap.html
+        └── detaille_push-swap.html
 ```
 
 # chose a faire sur le site 
@@ -48,3 +64,6 @@ faire le detaille de push swap
 
 faire les 2 du ways 
 
+revoir les lien de debut de pages 
+
+mettre le logo dans detaille red 
