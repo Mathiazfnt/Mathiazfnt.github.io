@@ -49,3 +49,9 @@ mettre les logo avant le texte
 faire les pages html des nouveau projet ,
 
 faire les pages sur les projet application externe 
+
+mettre le logo en gros de shinobe genesis 
+
+cree des logo par projet 
+
+mettre en plus gros les logo de shinobi genesis 

@@ -1,4 +1,4 @@
-fetch("./footer.html")
+fetch("/footer.html")
     .then(response => {
         if (!response.ok) {
             throw new Error("Erreur lors du chargement du footer");
