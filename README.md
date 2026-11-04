@@ -45,7 +45,14 @@ mes coordonnées.
     │       └── readme(bonus).md
     └── push_swap/
         ├── description_push-swap.html
-        └── detaille_push-swap.html
+        ├── detaille_push-swap.html
+        └── diverts/
+            ├── Push swap  - Grille d'évaluation.xlsx
+            ├── Push swap - Grille d'évaluation.pdf
+            ├── push-swap-presentation.pdf
+            ├── push-swap-sujet-fr.pdf
+            ├── push_swap.pdf
+            └── README.md
 ```
 
 # chose a faire sur le site 
@@ -60,10 +67,6 @@ metree quelque ligne de code dans les detaille
 
 cree le projet du root me 
 
-faire le detaille de push swap 
-
 faire les 2 du ways 
 
-revoir les lien de debut de pages 
-
-mettre le logo dans detaille red 
+RECREE LE PDF DE EVALUATION 
